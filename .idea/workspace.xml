@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="515ec1d1-510d-4dd6-8bbe-1130d61e1901" name="更改" comment="Librarian@Sanskrity" />
+    <list default="true" id="515ec1d1-510d-4dd6-8bbe-1130d61e1901" name="更改" comment="Librarian@Sanskrity">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,7 +67,7 @@
       <workItem from="1794413760368" duration="1329000" />
       <workItem from="1794415115670" duration="132000" />
       <workItem from="1794445689020" duration="18000" />
-      <workItem from="1795013152059" duration="449000" />
+      <workItem from="1795013152059" duration="1208000" />
     </task>
     <task id="LOCAL-00001" summary="Librarian@Sanskrity">
       <option name="closed" value="true" />
@@ -75,11 +77,30 @@
       <option name="project" value="LOCAL" />
       <updated>1795013508390</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Librarian@Sanskrity">
+      <option name="closed" value="true" />
+      <created>1795013754452</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1795013754452</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Librarian@Sanskrity" />
