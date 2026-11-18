@@ -1,0 +1,61 @@
+-- 1. 图书表 Book
+CREATE TABLE `book` (
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT '编号',
+  `type` VARCHAR(50) NOT NULL COMMENT '类别',
+  `name` VARCHAR(50) NOT NULL COMMENT '名称',
+  `price` DOUBLE NOT NULL COMMENT '价格',
+  `count` INT NOT NULL COMMENT '数量',
+  `publish_house` VARCHAR(50) NOT NULL COMMENT '出版社',
+  `operate_time` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '最后一次操作时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='图书表';
+
+-- 2. 借阅记录表 Borrow
+CREATE TABLE `borrow` (
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT '借阅编号',
+  `b_id` INT NOT NULL COMMENT '借阅者学号',
+  `b_name` VARCHAR(50) NOT NULL COMMENT '借阅者姓名',
+  `book_name` VARCHAR(100) NOT NULL COMMENT '借阅图书名称',
+  `b_date` DATETIME NOT NULL COMMENT '借阅日期',
+  `r_date` DATETIME NULL COMMENT '归还日期',
+  `operate_time` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '最后一次操作时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='借阅记录表';
+
+-- 3. 图书管理人员表 Librarian
+CREATE TABLE `librarian` (
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT '编号',
+  `name` VARCHAR(50) NOT NULL COMMENT '名字',
+  `password` VARCHAR(50) NOT NULL COMMENT '密码',
+  `sex` VARCHAR(2) NOT NULL COMMENT '性别',
+  `operate_time` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '最后一次操作时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='图书管理人员表';
+
+-- 4. 借阅者信息表 Borrower
+CREATE TABLE `borrower` (
+  `id` INT NOT NULL COMMENT '学号',
+  `sex` VARCHAR(2) NOT NULL COMMENT '性别',
+  `name` VARCHAR(100) NOT NULL COMMENT '名字',
+  `password` VARCHAR(50) NOT NULL COMMENT '密码',
+  `count` INT NULL DEFAULT 0 COMMENT '借阅数量',
+  `operate_time` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '最后一次操作时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='借阅者信息表';
+
+-- 5. 权限表 Permission
+CREATE TABLE `permission` (
+  `permission_id` INT NOT NULL COMMENT '权限编号',
+  `permission_name` VARCHAR(50) NOT NULL COMMENT '权限名称',
+  `operate_time` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '最后一次操作时间',
+  PRIMARY KEY (`permission_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='权限表';
+
+-- 6. 库存表 Storage
+CREATE TABLE `storage` (
+  `s_id` INT NOT NULL COMMENT '库存编号',
+  `book_id` INT NOT NULL COMMENT '图书编号',
+  `quantity` INT NOT NULL COMMENT '库存数量',
+  `operate_time` DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP COMMENT '最后一次操作时间',
+  PRIMARY KEY (`s_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COMMENT='库存表';
